@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration QR Generator</title>
+    <link rel="stylesheet" href="static/css/normalize.css">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="container screen active" id="screen1">
+        <h1>Event Registration</h1>
+        <form action="/create-event" method="POST">
+            <label for="summary">Event Title:</label>
+            <input type="text" id="summary" name="summary" required><br><br>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location"><br><br>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea><br><br>
+
+            <label for="start">Start Time (YYYY-MM-DDTHH:MM:SS):</label>
+            <input type="text" id="start" name="start" required><br><br>
+
+            <label for="end">End Time (YYYY-MM-DDTHH:MM:SS):</label>
+            <input type="text" id="end" name="end" required><br><br>
+
+            <label for="timezone">Time Zone:</label>
+            <input type="text" id="timezone" name="timezone" value="America/Chicago" required><br><br>
+
+            <label for="attendees">Attendees (comma-separated emails):</label>
+            <input type="text" id="attendees" name="attendees"><br><br>
+
+            <button type="submit">Create Event</button>
+        </form>
+    </div>
+
+</body>
+</html>

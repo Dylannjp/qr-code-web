@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ff0000; /* Bright red */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    background: gray;
+    color: #333;
+    padding: 10px;
+    margin: -20px -20px 20px -20px;
+    border-radius: 10px 10px 0 0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+label {
+    font-size: 14px;
+    color: #666;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #ff2222;
+}
+
+.qr-code {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.qr-code img {
+    max-width: 200px;
+}
+
+.upload-area {
+    border: 2px dashed #ddd;
+    padding: 40px;
+    text-align: center;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.preview-image {
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+.note {
+    color: #ff4444;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+#screen2, #screen3, #screen4 {
+    text-align: center;
+}
+
+.qr-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+#screen2 button {
+    width: auto;
+    min-width: 120px;
+    margin: 10px;
+    padding: 10px 30px;
+}
+
+.upload-area {
+    border: 2px dashed #ddd;
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+    max-width: 300px;   
+}
+
+.preview-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+.preview-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+#screen4 button {
+    width: auto;
+    min-width: 200px;
+    margin: 20px auto;
+    display: block;
+}
+
+#screen2 p, #screen3 p, #screen4 p {
+    margin: 20px 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+#event_created {
+    align-items: center;
+    text-align: center;
+}
