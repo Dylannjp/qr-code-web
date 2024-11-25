@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/normalize.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Event Created</title>
+</head>
+<body>
+    <div class="container screen active" id="event_created">
+        <h1>Event Created!</h1>
+        <p>Your event has been successfully created.</p>
+        <p>You can use the QR code below to invite attendees or click the link to add attendees directly:</p>
+
+        <!-- Display the QR Code -->
+        <img src="{{ url_for('qr_code', event_id=event_id) }}" alt="QR Code for Add Attendees Page" style="max-width: 200px; border: 1px solid #ddd;">
+
+        <!-- Add a Download Link -->
+        <p>
+            <a href="{{ url_for('qr_code', event_id=event_id) }}" download>
+                <button style="margin-top: 10px; padding: 10px; background-color: red; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    Download QR Code
+                </button>
+            </a>
+        </p>
+
+        <!-- Add a Link to the Add Attendees Page -->
+        <p>
+            <a href="{{ url_for('add_attendees', event_id=event_id) }}" style="text-decoration: none;">
+                <button style="padding: 10px; background-color: blue; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    Go to Add Attendees Page
+                </button>
+            </a>
+        </p>
+    </div>
+</body>
+</html>
